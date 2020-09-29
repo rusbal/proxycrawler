@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   root "dashboard#index"
 
-  resource :request_urls, only: :show
+  resources :request_urls, only: :index do
+    resources :crawler, only: :create
+  end
 end

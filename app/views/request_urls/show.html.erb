@@ -1,0 +1,22 @@
+<h1>Request URLs</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">URL</th>
+      <th scope="col">Requested At</th>
+      <th scope="col">Crawled At</th>
+      <th scope="col">Manually Initiate Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @request_urls.each do |request_url| %>
+      <tr>
+        <td><%= request_url.url %></td>
+        <td><%= request_url.requested_at %></td>
+        <td><%= request_url.crawled_at %></td>
+        <td><%= button_to "Crawl", request_url_crawler_index_path(request_url) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

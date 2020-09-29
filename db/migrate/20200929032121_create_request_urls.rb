@@ -7,5 +7,7 @@ class CreateRequestUrls < ActiveRecord::Migration[6.0]
 
       t.timestamps
     end
+
+    add_index :request_urls, :url, unique: true
   end
 end

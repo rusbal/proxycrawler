@@ -10,10 +10,12 @@ class ProxyCrawlRequestUrl < RequestUrl
   PROXYCRAWL_TOKEN = "DYAT0hMPreb209_PYqo-Pw"
 
   def response_body
+    touch(:requested_at)
     uri = URI.parse(proxy_url)
     http = Net::HTTP.new(uri.host, uri.port)
     http.use_ssl = true
     response = http.get(uri.request_uri)
+    touch(:crawled_at)
     response.body
   end
 

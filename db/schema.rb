@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2020_09_29_032121) do
     t.datetime "crawled_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["url"], name: "index_request_urls_on_url", unique: true
   end
 
 end

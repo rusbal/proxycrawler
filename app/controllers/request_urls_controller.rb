@@ -1,5 +1,5 @@
 class RequestUrlsController < ApplicationController
-  def show
+  def index
     @request_urls = RequestUrl.all
   end
 end

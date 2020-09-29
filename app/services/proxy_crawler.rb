@@ -5,9 +5,7 @@ class ProxyCrawler < ApplicationService
   end
 
   def call
-    ActiveRecord::Base.transaction do
-      process
-    end
+    process
   rescue => error
     debug(self, error)
     false
@@ -16,9 +14,7 @@ class ProxyCrawler < ApplicationService
   private
 
   def process
-    a = @request_url.response_body
-    binding.pry
-    true
+    ResponseBodyProcessor.call(@request_url.response_body)
   end
 
 end

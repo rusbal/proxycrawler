@@ -10,7 +10,7 @@ class CrawlerController < ApplicationController
   private
 
   def process_crawl
-    true
+    ProxyCrawler.call
   rescue
     false
   end

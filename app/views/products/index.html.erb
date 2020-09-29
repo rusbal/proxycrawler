@@ -1,0 +1,28 @@
+<h1>Products (<%= @products.count %>)</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Amazon ASIN</th>
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Image URL</th>
+      <th scope="col">Size Base</th>
+      <th scope="col">Rating</th>
+      <th scope="col">Review Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.amazon_asin %></td>
+        <td><%= product.name %></td>
+        <td><%= "#{product.price_symbol}#{product.price}" %> <strike><%= product.price_crossed_out %></strike></td>
+        <td><%= product.image_url %></td>
+        <td><%= product.size_base %></td>
+        <td><%= product.rating %></td>
+        <td><%= product.review_count %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

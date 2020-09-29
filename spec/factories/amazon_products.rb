@@ -1,5 +1,6 @@
 FactoryBot.define do
   factory :amazon_product do
+    amazon_asin { "B004GIO0F8" }
     image_url { "MyString" }
     name { "MyString" }
     rating { "9.99" }

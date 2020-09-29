@@ -1,6 +1,7 @@
 class CreateAmazonProducts < ActiveRecord::Migration[6.0]
   def change
     create_table :amazon_products do |t|
+      t.string :amazon_asin, null: false
       t.string :name, null: false
       t.string :price_symbol
       t.decimal :price, precision: 8, scale: 2, null: false

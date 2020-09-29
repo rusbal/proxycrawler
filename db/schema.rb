@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2020_09_29_082238) do
   enable_extension "plpgsql"
 
   create_table "amazon_products", force: :cascade do |t|
+    t.string "amazon_asin", null: false
     t.string "name", null: false
     t.string "price_symbol"
     t.decimal "price", precision: 8, scale: 2, null: false

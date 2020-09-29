@@ -1,6 +1,7 @@
 class ProxyCrawler < ApplicationService
 
-  def initialize()
+  def initialize(request_url)
+    @request_url = request_url
   end
 
   def call
@@ -15,6 +16,8 @@ class ProxyCrawler < ApplicationService
   private
 
   def process
+    a = @request_url.response_body
+    binding.pry
     true
   end
 

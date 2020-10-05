@@ -1,4 +1,5 @@
 # Manual Crawler
 
 ## Models
-* RequestUrl
+1. ProxyCrawlRequestUrl
+2. AmazonProduct

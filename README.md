@@ -32,3 +32,16 @@ Supposedly crawling should run as a scheduled background process.  I wasn't able
    * rating
    * review_count
 
+## Service Objects
+1. ProxyCrawler
+2. ResponseBodyProcessor
+
+## Additional Gems Used
+1. nokogiri
+2. pry-rails
+3. pry-byebug
+4. rspec-rails
+5. factory_bot_rails
+6. faker
+7. database_cleaner-active_record
+8. shoulda-matchers
